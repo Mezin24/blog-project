@@ -5,3 +5,12 @@
 - add index.html and config HtmlWebpackPlugin with template
 - webpack.ProgressPlugin
 - webpack config on typescript
+
+### 1.2
+
+- refactor webpack config
+
+### 1.3
+
+- add webpack-dev-server
+- add env variables

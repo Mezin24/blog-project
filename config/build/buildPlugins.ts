@@ -1,10 +1,10 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
-import { BuildPats } from './types/buildOptions';
+import { BuildOptions } from './types/buildOptions';
 
-export const buildPlugins = (
-  paths: BuildPats
-): webpack.WebpackPluginInstance[] => {
+export const buildPlugins = ({
+  paths,
+}: BuildOptions): webpack.WebpackPluginInstance[] => {
   return [
     new HtmlWebpackPlugin({
       template: paths.html,

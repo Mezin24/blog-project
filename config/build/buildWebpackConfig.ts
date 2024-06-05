@@ -3,6 +3,7 @@ import { buildLoaders } from './buildLoaders';
 import { buildPlugins } from './buildPlugins';
 import { buildResolvers } from './buildResolvers';
 import { BuildOptions } from './types/buildOptions';
+import { buildDevServer } from './buildDevServer';
 
 export const buildWebpackConfig = (
   options: BuildOptions
@@ -10,7 +11,6 @@ export const buildWebpackConfig = (
   const { mode, isDev, paths } = options;
   return {
     mode,
-    devtool: 'inline-source-map',
     entry: paths.entry,
     output: {
       filename: '[name].[contenthash].js',
@@ -21,6 +21,8 @@ export const buildWebpackConfig = (
       rules: buildLoaders(),
     },
     resolve: buildResolvers(),
-    plugins: buildPlugins(paths),
+    plugins: buildPlugins(options),
+    devtool: isDev ? 'inline-source-map' : undefined,
+    devServer: isDev ? buildDevServer(options) : undefined,
   };
 };
