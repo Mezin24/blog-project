@@ -14,3 +14,8 @@
 
 - add webpack-dev-server
 - add env variables
+
+### 1.4
+
+- React
+- add CSS and SCSS to webpack
