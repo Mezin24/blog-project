@@ -29,3 +29,8 @@
 
 - add react-router-dom
 - code spliting
+
+### 1.7
+
+- add basic variables and themes styles
+- toggle theme with useContext
