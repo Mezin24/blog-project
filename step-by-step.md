@@ -38,3 +38,7 @@
 ### 1.8
 
 - add classnames helper function
+
+### 1.10
+
+- use Feature Slice architecture, refactor
