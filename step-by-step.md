@@ -24,3 +24,8 @@
 
 - add MiniCssExtractPlugin in production mode
 - add css modules for style isolation
+
+### 1.6
+
+- add react-router-dom
+- code spliting
