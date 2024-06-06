@@ -34,3 +34,7 @@
 
 - add basic variables and themes styles
 - toggle theme with useContext
+
+### 1.8
+
+- add classnames helper function
