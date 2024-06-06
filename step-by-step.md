@@ -19,3 +19,8 @@
 
 - React
 - add CSS and SCSS to webpack
+
+### 1.5
+
+- add MiniCssExtractPlugin in production mode
+- add css modules for style isolation
