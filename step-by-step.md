@@ -46,3 +46,7 @@
 ### 2.1
 
 - add routeConfig and AppRouter component
+
+### 2.2
+
+- add Navbar widget and UI AppLink

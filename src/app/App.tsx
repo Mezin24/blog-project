@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom';
-
-import { classnames } from 'shared/lib/classnames/classnames';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from './providers/AppRouter';
 
+import { Navabar } from 'widgets/Navbar';
+import { classNames } from 'shared/lib/classNames/classNames';
 import './styles/index.scss';
 
 const App = () => {
@@ -11,15 +10,14 @@ const App = () => {
 
   return (
     <div
-      className={classnames(
+      className={classNames(
         'app',
         { selected: true, red: false, hover: true },
         [theme]
       )}
     >
+      <Navabar />
       <button onClick={toggleTheme}>Toggle</button>
-      <Link to='/'>Главная</Link>
-      <Link to='/about'>О нас</Link>
       <AppRouter />
     </div>
   );
