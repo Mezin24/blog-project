@@ -42,3 +42,7 @@
 ### 1.10
 
 - use Feature Slice architecture, refactor
+
+### 2.1
+
+- add routeConfig and AppRouter component
