@@ -50,3 +50,8 @@
 ### 2.2
 
 - add Navbar widget and UI AppLink
+
+### 2.3
+
+- add swgrLoader and fileLoader
+- UI Button, ThemeSwitcher widget

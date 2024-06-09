@@ -6,7 +6,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import './styles/index.scss';
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <div
@@ -17,7 +17,6 @@ const App = () => {
       )}
     >
       <Navabar />
-      <button onClick={toggleTheme}>Toggle</button>
       <AppRouter />
     </div>
   );
