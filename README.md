@@ -4,3 +4,4 @@
 
 - **Webpack** configuration;
 - **Typescript**;
+- **React**;

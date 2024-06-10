@@ -55,3 +55,7 @@
 
 - add swgrLoader and fileLoader
 - UI Button, ThemeSwitcher widget
+
+### 2.4
+
+- add Sidebar widget
