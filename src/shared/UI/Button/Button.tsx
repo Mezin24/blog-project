@@ -20,6 +20,7 @@ export const Button = (props: ButtonProps) => {
 
   return (
     <button
+      type='button'
       className={classNames(cls.Button, {}, [className, cls[theme]])}
       {...otherProps}
     >

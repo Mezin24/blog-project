@@ -1,10 +1,9 @@
-import { useTranslation } from 'react-i18next';
 import { Suspense } from 'react';
 import { useTheme } from 'app/providers/ThemeProvider';
-import { AppRouter } from './providers/AppRouter';
-import { Navabar } from 'widgets/Navbar';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { NavBar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AppRouter } from './providers/AppRouter';
 import './styles/index.scss';
 
 const App = () => {
@@ -19,7 +18,7 @@ const App = () => {
       )}
     >
       <Suspense fallback=''>
-        <Navabar />
+        <NavBar />
         <div className='content-page'>
           <Sidebar />
           <AppRouter />
