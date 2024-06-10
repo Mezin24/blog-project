@@ -58,4 +58,8 @@
 
 ### 2.4
 
-- add Sidebar widget
+- add Sidebar
+
+### 2.5
+
+- add i18next internalizatoin
