@@ -63,3 +63,11 @@
 ### 2.5
 
 - add i18next internalizatoin
+
+### 2.6
+
+- add webpack HotModulereplacement
+
+### 2.7
+
+- add babelLoader
