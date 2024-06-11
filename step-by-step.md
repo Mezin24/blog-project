@@ -83,3 +83,7 @@
 ### 2.10
 
 - add jest, config and first unit test
+
+### 2.11
+
+- NotFoundPage, PageLoader and Loader components
