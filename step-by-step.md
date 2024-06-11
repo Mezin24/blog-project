@@ -87,3 +87,7 @@
 ### 2.11
 
 - NotFoundPage, PageLoader and Loader components
+
+### 3.1
+
+- ErrorBoundary component
