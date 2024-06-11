@@ -37,7 +37,7 @@
 
 ### 1.8
 
-- add classnames helper function
+- add classNames helper function
 
 ### 1.10
 
@@ -79,3 +79,7 @@
 ### 2.9
 
 - add styleLint and fix errors
+
+### 2.10
+
+- add jest, config and first unit test
