@@ -71,3 +71,11 @@
 ### 2.7
 
 - add babelLoader
+
+### 2.8
+
+- add eslint with rules and fix errors
+
+### 2.9
+
+- add styleLint and fix errors
