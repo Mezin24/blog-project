@@ -91,3 +91,12 @@
 ### 3.1
 
 - ErrorBoundary component
+
+### 3.2
+
+- add webpack Bundle analyzer
+
+### 3.3
+
+- add React Testing Library
+- add tests for Button and Sidebar
