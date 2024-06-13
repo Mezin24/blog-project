@@ -7,18 +7,25 @@ import { BuildOptions } from './types/buildOptions';
 export const buildPlugins = ({
   isDev,
   paths,
-}: BuildOptions): webpack.WebpackPluginInstance[] => [
-  new HtmlWebpackPlugin({
-    template: paths.html,
-  }),
-  new webpack.ProgressPlugin(),
-  new MiniCssExtractPlugin({
-    filename: 'css/[name].[contenthash:8].css',
-    chunkFilename: 'css/[name].[contenthash:8].css',
-  }),
-  new webpack.DefinePlugin({
-    __IS_DEV__: isDev,
-  }),
-  new webpack.HotModuleReplacementPlugin(),
-  new BundleAnalyzerPlugin({ openAnalyzer: false }),
-];
+}: BuildOptions): webpack.WebpackPluginInstance[] => {
+  const plugins = [
+    new HtmlWebpackPlugin({
+      template: paths.html,
+    }),
+    new webpack.ProgressPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[contenthash:8].css',
+      chunkFilename: 'css/[name].[contenthash:8].css',
+    }),
+    new webpack.DefinePlugin({
+      __IS_DEV__: isDev,
+    }),
+  ];
+
+  if (isDev) {
+    plugins.push(new webpack.HotModuleReplacementPlugin());
+    plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
+  }
+
+  return plugins;
+};

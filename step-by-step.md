@@ -111,3 +111,7 @@
 
 - loki for screenshot test
 - add screenshots
+
+### 3.5
+
+- add github actions CI Pipeline
