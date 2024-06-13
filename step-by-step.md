@@ -100,3 +100,9 @@
 
 - add React Testing Library
 - add tests for Button and Sidebar
+
+### 3.4
+
+- add Storybook and config
+- add Storybook decorators
+- add stories for all components

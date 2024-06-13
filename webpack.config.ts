@@ -1,10 +1,10 @@
 import path from 'path';
 import 'webpack-dev-server';
 import { buildWebpackConfig } from './config/build/buildWebpackConfig';
-import { BuildEnv, BuildPats } from './config/build/types/buildOptions';
+import { BuildEnv, BuildPaths } from './config/build/types/buildOptions';
 
 export default (env: BuildEnv) => {
-  const paths: BuildPats = {
+  const paths: BuildPaths = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     html: path.resolve(__dirname, 'public', 'index.html'),
     output: path.resolve(__dirname, 'build'),
