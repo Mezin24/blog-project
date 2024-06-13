@@ -37,7 +37,7 @@
 
 ### 1.8
 
-- add classNames helper function
+- add classnames helper function
 
 ### 1.10
 

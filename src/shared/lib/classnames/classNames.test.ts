@@ -1,20 +1,20 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classnames } from 'shared/lib/classnames/classnames';
 
-describe('classNames', () => {
+describe('classnames', () => {
   test('with only first param', () => {
     const expected = 'testClass';
-    expect(classNames('testClass')).toBe(expected);
+    expect(classnames('testClass')).toBe(expected);
   });
 
   test('with first class and additional', () => {
     const expected = 'testClass class1 class2';
-    expect(classNames('testClass', {}, ['class1', 'class2'])).toBe(expected);
+    expect(classnames('testClass', {}, ['class1', 'class2'])).toBe(expected);
   });
 
   test('with mods', () => {
     const expected = 'testClass class1 class2 hovered clecked';
     expect(
-      classNames('testClass', { hovered: true, clecked: true }, [
+      classnames('testClass', { hovered: true, clecked: true }, [
         'class1',
         'class2',
       ])
@@ -24,7 +24,7 @@ describe('classNames', () => {
   test('with false mods', () => {
     const expected = 'testClass class1 class2 clecked';
     expect(
-      classNames('testClass', { hovered: false, clecked: true }, [
+      classnames('testClass', { hovered: false, clecked: true }, [
         'class1',
         'class2',
       ])
@@ -34,7 +34,7 @@ describe('classNames', () => {
   test('with undefined mods', () => {
     const expected = 'testClass class1 class2 clecked';
     expect(
-      classNames('testClass', { hovered: undefined, clecked: true }, [
+      classnames('testClass', { hovered: undefined, clecked: true }, [
         'class1',
         'class2',
       ])
