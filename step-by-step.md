@@ -106,3 +106,8 @@
 - add Storybook and config
 - add Storybook decorators
 - add stories for all components
+
+### 3.4
+
+- loki for screenshot test
+- add screenshots
