@@ -37,7 +37,7 @@
 
 ### 1.8
 
-- add classNames helper function
+- add classnames helper function
 
 ### 1.10
 
@@ -91,3 +91,32 @@
 ### 3.1
 
 - ErrorBoundary component
+
+### 3.2
+
+- add webpack Bundle analyzer
+
+### 3.3
+
+- add React Testing Library
+- add tests for Button and Sidebar
+
+### 3.4
+
+- add Storybook and config
+- add Storybook decorators
+- add stories for all components
+
+### 3.4
+
+- loki for screenshot test
+- add screenshots
+
+### 3.5
+
+- add github actions CI Pipeline
+
+### 3.6
+
+- update sidebar
+- add componentRender decorator for tests

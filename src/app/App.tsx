@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classnames } from 'shared/lib/classnames/classnames';
 import { AppRouter } from './providers/AppRouter';
 import './styles/index.scss';
 
@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <div
-      className={classNames(
+      className={classnames(
         'app',
         { selected: true, red: false, hover: true },
         [theme]

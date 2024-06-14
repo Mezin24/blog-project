@@ -64,6 +64,7 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     'operator-linebreak': 'off',
     'function-paren-newline': 'off',
+    'arrow-body-style': ['error', 'as-needed'],
   },
   globals: {
     __IS_DEV__: true,
