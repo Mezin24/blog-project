@@ -115,3 +115,8 @@
 ### 3.5
 
 - add github actions CI Pipeline
+
+### 3.6
+
+- update sidebar
+- add componentRender decorator for tests
