@@ -1,4 +1,12 @@
-import { ReactNode, useCallback, MouseEvent } from 'react';
+import {
+  MouseEvent,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+import { Portal } from 'shared/UI/Portal/Portal';
 import { classnames } from 'shared/lib/classnames/classnames';
 import cls from './Modal.module.scss';
 
@@ -8,16 +16,26 @@ interface ModalProps {
   isOpen?: boolean;
   onClose?: () => void;
 }
+
+const ANIMATION_DELAY = 300;
+
 export const Modal = (props: ModalProps) => {
   const { children, className, isOpen, onClose } = props;
+  const [isClosing, setIsClosing] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
   const mods: Record<string, string | boolean> = {
     [cls.opened]: isOpen,
+    [cls.closed]: isClosing,
   };
 
   const onCloseHandler = useCallback(() => {
     if (onClose) {
-      onClose();
+      setIsClosing(true);
+      timerRef.current = setTimeout(() => {
+        setIsClosing(false);
+        onClose();
+      }, ANIMATION_DELAY);
     }
   }, [onClose]);
 
@@ -25,13 +43,35 @@ export const Modal = (props: ModalProps) => {
     e.stopPropagation();
   }, []);
 
+  const onKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onCloseHandler();
+      }
+    },
+    [onCloseHandler]
+  );
+
+  useEffect(() => {
+    if (isOpen) {
+      window.addEventListener('keydown', onKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+      clearTimeout(timerRef.current);
+    };
+  }, [isOpen, onKeyDown]);
+
   return (
-    <div className={classnames(cls.Modal, mods, [className])}>
-      <div className={cls.overlay} onClick={onCloseHandler}>
-        <div className={cls.content} onClick={onClickHandler}>
-          {children}
+    <Portal>
+      <div className={classnames(cls.Modal, mods, [className])}>
+        <div className={cls.overlay} onClick={onCloseHandler}>
+          <div className={cls.content} onClick={onClickHandler}>
+            {children}
+          </div>
         </div>
       </div>
-    </div>
+    </Portal>
   );
 };

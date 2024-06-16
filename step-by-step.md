@@ -120,3 +120,8 @@
 
 - update sidebar
 - add componentRender decorator for tests
+
+### 4.1
+
+- add modal component
+- add portal

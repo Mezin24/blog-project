@@ -36,3 +36,9 @@
     transform: scale(1);
   }
 }
+
+.closed {
+  .content {
+    transform: scale(0.2);
+  }
+}
