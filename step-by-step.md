@@ -125,3 +125,8 @@
 
 - add modal component
 - add portal
+
+### 4.2
+
+- add redux store
+- add counter entity
