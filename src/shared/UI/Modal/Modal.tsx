@@ -9,6 +9,7 @@ import {
 import { Portal } from 'shared/UI/Portal/Portal';
 import { classnames } from 'shared/lib/classnames/classnames';
 import cls from './Modal.module.scss';
+import { useTheme } from 'app/providers/ThemeProvider';
 
 interface ModalProps {
   className?: string;
@@ -22,6 +23,7 @@ const ANIMATION_DELAY = 300;
 export const Modal = (props: ModalProps) => {
   const { children, className, isOpen, onClose } = props;
   const [isClosing, setIsClosing] = useState(false);
+  const { theme } = useTheme();
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
   const mods: Record<string, string | boolean> = {
@@ -65,7 +67,7 @@ export const Modal = (props: ModalProps) => {
 
   return (
     <Portal>
-      <div className={classnames(cls.Modal, mods, [className])}>
+      <div className={classnames(cls.Modal, mods, [className, theme])}>
         <div className={cls.overlay} onClick={onCloseHandler}>
           <div className={cls.content} onClick={onClickHandler}>
             {children}

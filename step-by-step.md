@@ -130,3 +130,7 @@
 
 - add redux store
 - add counter entity
+
+### 4.3
+
+- fix global styles for modal
