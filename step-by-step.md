@@ -134,3 +134,7 @@
 ### 4.3
 
 - fix global styles for modal
+
+### 4.4
+
+- add json server and fake db

@@ -1,3 +1,4 @@
+import { useTheme } from 'app/providers/ThemeProvider';
 import {
   MouseEvent,
   ReactNode,
@@ -9,7 +10,6 @@ import {
 import { Portal } from 'shared/UI/Portal/Portal';
 import { classnames } from 'shared/lib/classnames/classnames';
 import cls from './Modal.module.scss';
-import { useTheme } from 'app/providers/ThemeProvider';
 
 interface ModalProps {
   className?: string;
