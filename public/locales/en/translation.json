@@ -6,5 +6,7 @@
   "Короткий язык": "En",
   "Главная": "Main",
   "О нас": "About us",
-  "Войти": "Login"
+  "Войти": "Login",
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password"
 }

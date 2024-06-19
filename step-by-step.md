@@ -138,3 +138,11 @@
 ### 4.4
 
 - add json server and fake db
+
+### 4.5
+
+- add addLoginForm feature and Input component
+
+### 4.6
+
+- add husky
