@@ -120,3 +120,34 @@
 
 - update sidebar
 - add componentRender decorator for tests
+
+### 4.1
+
+- add modal component
+- add portal
+
+### 4.2
+
+- add redux store
+- add counter entity
+
+### 4.3
+
+- fix global styles for modal
+
+### 4.4
+
+- add json server and fake db
+
+### 4.5
+
+- add addLoginForm feature and Input component
+
+### 4.6
+
+- add husky
+
+### 4.7
+
+- add authByUsername feature
+- add user entity

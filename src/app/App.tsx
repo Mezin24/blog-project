@@ -1,13 +1,19 @@
-import { Suspense } from 'react';
 import { useTheme } from 'app/providers/ThemeProvider';
+import { userActions } from 'entities/User';
+import { Suspense, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { classnames } from 'shared/lib/classnames/classnames';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
-import { classnames } from 'shared/lib/classnames/classnames';
 import { AppRouter } from './providers/AppRouter';
-import './styles/index.scss';
 
 const App = () => {
   const { theme } = useTheme();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(userActions.initAuthData());
+  }, [dispatch]);
 
   return (
     <div

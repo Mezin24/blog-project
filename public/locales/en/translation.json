@@ -5,5 +5,9 @@
   "Обновить страницу": "Reload the page",
   "Короткий язык": "En",
   "Главная": "Main",
-  "О нас": "About us"
+  "О нас": "About us",
+  "Войти": "Login",
+  "Выйти": "Logout",
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password"
 }
