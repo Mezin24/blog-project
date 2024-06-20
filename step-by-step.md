@@ -146,3 +146,8 @@
 ### 4.6
 
 - add husky
+
+### 4.7
+
+- add authByUsername feature
+- add user entity

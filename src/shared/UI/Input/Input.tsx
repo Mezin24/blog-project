@@ -1,10 +1,10 @@
 import {
   ChangeEvent,
   InputHTMLAttributes,
+  memo,
   useCallback,
   useEffect,
   useRef,
-  useState,
 } from 'react';
 import { classnames } from 'shared/lib/classnames/classnames';
 import cls from './Input.module.scss';
@@ -20,7 +20,7 @@ interface InputProps extends HtmlInputProps {
   onChange?: (value: string) => void;
   autofocus?: boolean;
 }
-export const Input = (props: InputProps) => {
+export const Input = memo((props: InputProps) => {
   const {
     className,
     onChange,
@@ -59,4 +59,4 @@ export const Input = (props: InputProps) => {
       />
     </div>
   );
-};
+});
