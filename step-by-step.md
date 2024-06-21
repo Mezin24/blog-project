@@ -151,3 +151,8 @@
 
 - add authByUsername feature
 - add user entity
+
+### 5.1
+
+- optimization
+- dynamic module loader for async reducers

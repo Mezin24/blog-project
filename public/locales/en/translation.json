@@ -9,5 +9,6 @@
   "Войти": "Login",
   "Выйти": "Logout",
   "Введите username": "Enter username",
-  "Введите пароль": "Enter password"
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Authorization Form"
 }
