@@ -156,3 +156,8 @@
 
 - optimization
 - dynamic module loader for async reducers
+
+### 5.2
+
+- add authByUsername unit tests
+- add TestAsyncThunk
