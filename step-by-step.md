@@ -161,3 +161,10 @@
 
 - add authByUsername unit tests
 - add TestAsyncThunk
+
+### 5.3
+
+- wrap in memo
+- add profile page
+- add profile entity
+- refactor sidebar items

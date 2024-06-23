@@ -1,13 +1,11 @@
 import { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button, ButtonSize, ButtonTheme } from 'shared/UI/Button/Button';
 import { classnames } from 'shared/lib/classnames/classnames';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
-import { RoutePath } from 'shared/config/routerConfig/routerConfig';
-import { AppLink, AppLinkTheme } from 'shared/UI/AppLink/AppLink';
-import { useTranslation } from 'react-i18next';
-import MainIcon from 'shared/assets/icons/main.svg';
-import AboutIcon from 'shared/assets/icons/about.svg';
+import { SidebarItems } from '../../model/items';
+import { SidebarItem } from '../SidebarItem/SidebarItem';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -40,22 +38,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
         {collapsed ? '>' : '<'}
       </Button>
       <div className={cls.items}>
-        <AppLink
-          theme={AppLinkTheme.SECONDARY}
-          className={cls.item}
-          to={RoutePath.main}
-        >
-          <MainIcon className={cls.icon} />
-          <span className={cls.link}>{t('Главная')}</span>
-        </AppLink>
-        <AppLink
-          theme={AppLinkTheme.SECONDARY}
-          className={cls.item}
-          to={RoutePath.about}
-        >
-          <AboutIcon className={cls.icon} />
-          <span className={cls.link}>{t('О нас')}</span>
-        </AppLink>
+        {SidebarItems.map((item) => (
+          <SidebarItem item={item} key={item.path} collapsed={collapsed} />
+        ))}
       </div>
       <div className={cls.switchers}>
         <ThemeSwitcher />
