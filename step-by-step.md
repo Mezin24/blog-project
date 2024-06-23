@@ -168,3 +168,12 @@
 - add profile page
 - add profile entity
 - refactor sidebar items
+
+### 5.4
+
+- add apiUrl
+- add axios instance
+
+### 5.5
+
+- add profileCard
