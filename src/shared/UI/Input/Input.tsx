@@ -31,7 +31,7 @@ export const Input = memo((props: InputProps) => {
     ...otherProps
   } = props;
 
-  const inputRef = useRef<HTMLInputElement>();
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const onChangeValue = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
@@ -42,7 +42,7 @@ export const Input = memo((props: InputProps) => {
 
   useEffect(() => {
     if (autoFocus) {
-      inputRef?.current.focus();
+      inputRef?.current?.focus();
     }
   }, [autoFocus]);
 

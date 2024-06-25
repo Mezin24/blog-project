@@ -151,3 +151,34 @@
 
 - add authByUsername feature
 - add user entity
+
+### 5.1
+
+- optimization
+- dynamic module loader for async reducers
+
+### 5.2
+
+- add authByUsername unit tests
+- add TestAsyncThunk
+
+### 5.3
+
+- wrap in memo
+- add profile page
+- add profile entity
+- refactor sidebar items
+
+### 5.4
+
+- add apiUrl
+- add axios instance
+
+### 5.5
+
+- add profileCard
+
+### 5.6
+
+- fix ts errors
+- fix testAsyncThunk
