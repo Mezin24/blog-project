@@ -1,4 +1,4 @@
-export type Mods = Record<string, string | boolean>;
+export type Mods = Record<string, boolean | undefined>;
 
 export const classnames = (
   cls: string,

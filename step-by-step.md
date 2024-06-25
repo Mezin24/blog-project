@@ -177,3 +177,8 @@
 ### 5.5
 
 - add profileCard
+
+### 5.6
+
+- fix ts errors
+- fix testAsyncThunk

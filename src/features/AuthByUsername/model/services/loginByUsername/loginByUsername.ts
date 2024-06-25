@@ -27,7 +27,6 @@ export const loginByUsername = createAsyncThunk<
         JSON.stringify(response.data)
       );
 
-      extra.navigate('/about');
       return response.data;
     } catch (error) {
       return rejectWithValue('error');
