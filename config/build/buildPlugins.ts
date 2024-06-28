@@ -2,6 +2,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BuildOptions } from './types/buildOptions';
 
 export const buildPlugins = ({
@@ -29,6 +30,7 @@ export const buildPlugins = ({
   if (isDev) {
     plugins.push(new webpack.HotModuleReplacementPlugin());
     plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
+    plugins.push(new ReactRefreshWebpackPlugin());
   }
 
   return plugins;
