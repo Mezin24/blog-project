@@ -6,6 +6,7 @@ import { AppLink, AppLinkTheme } from 'shared/UI/AppLink/AppLink';
 import { classnames } from 'shared/lib/classnames/classnames';
 import { SidebarItemType } from '../../model/items';
 import cls from './SidebarItem.module.scss';
+import { useTranslation } from 'react-i18next';
 
 interface SidebarItemProps {
   className?: string;
@@ -19,6 +20,7 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
     className,
     collapsed,
   } = props;
+  const { t } = useTranslation();
 
   const isAuth = useSelector(getUserAuthData);
 

@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import AvatarImg from 'shared/assets/tests/avatar.jpg';
 import { Avatar } from './Avatar';
-import AvatarImg from './avatar.jpg';
 
 export default {
   title: 'shared/Avatar',
