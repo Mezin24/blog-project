@@ -2,17 +2,20 @@ import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency/model/types/currency';
 import {
   ProfileCard,
+  ValidateProfileError,
   fetchProfileData,
   getProfileError,
   getProfileForm,
   getProfileIsLoading,
   getProfileReadonly,
+  getProfileValidateErrors,
   profileActions,
   profileReducer,
 } from 'entities/Profile';
 import { useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { Text, TextTheme } from 'shared/UI/Text/Text';
 import {
   DynamicModuleLoader,
   ReducerList,
@@ -23,12 +26,21 @@ import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 const reducers: ReducerList = { profile: profileReducer };
 
 const ProfilePage = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('profile');
   const formData = useSelector(getProfileForm);
   const isLoading = useSelector(getProfileIsLoading);
   const error = useSelector(getProfileError);
   const readonly = useSelector(getProfileReadonly);
+  const validateErrors = useSelector(getProfileValidateErrors);
   const dispatch = useAppDispatch();
+
+  const validateErrorTranslate = {
+    [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка при сохранении'),
+    [ValidateProfileError.INCORRECT_COUNTRY]: t('Некорректный регион'),
+    [ValidateProfileError.NO_DATA]: t('Данные не указаны'),
+    [ValidateProfileError.INVALID_USER_DATA]: t('Имя и фамилия обязательны'),
+    [ValidateProfileError.INCORRECT_AGE]: t('Некорректный возраст'),
+  };
 
   const onChangeName = useCallback(
     (value: string) => {
@@ -96,6 +108,10 @@ const ProfilePage = () => {
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div>
         <ProfilePageHeader />
+        {validateErrors &&
+          validateErrors.map((err) => (
+            <Text theme={TextTheme.ERROR} text={validateErrorTranslate[err]} />
+          ))}
         <ProfileCard
           data={formData}
           error={error}
