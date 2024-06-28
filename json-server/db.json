@@ -1,13 +1,37 @@
 {
   "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 },
-    { "id": "3", "title": "another title", "views": 300 },
-    { "id": "4", "title": "another title", "views": 400 }
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "3",
+      "title": "another title",
+      "views": 300
+    },
+    {
+      "id": "4",
+      "title": "another title",
+      "views": 400
+    }
   ],
   "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
   ],
   "users": [
     {
@@ -19,11 +43,11 @@
   "profile": {
     "name": "Pavel",
     "lastname": "Mezentcev",
-    "age": 36,
+    "age": 37,
     "currency": "RUB",
     "country": "Russia",
-    "city": "Obninsk",
+    "city": "Обнинск",
     "username": "admin",
-    "avatar": "https://i.pinimg.com/originals/90/7a/b1/907ab15afa89ef232c9b180fb89b3557.jpg"
+    "avatar": "https://avatars.dzeninfra.ru/get-zen_doc/3765046/pub_602f7f605f462a3bfd6c764f_602f7fd1ffa2d86ae449b890/scale_1200"
   }
 }

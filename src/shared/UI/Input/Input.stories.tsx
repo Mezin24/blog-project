@@ -25,3 +25,11 @@ Dark.args = {
   placeholder: 'Text input',
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const DarkReadonly = Template.bind({});
+DarkReadonly.args = {
+  value: '1234545',
+  placeholder: 'Text input',
+  readonly: true,
+};
+DarkReadonly.decorators = [ThemeDecorator(Theme.DARK)];

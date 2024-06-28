@@ -11,5 +11,7 @@
   "Выйти": "Logout",
   "Введите username": "Enter username",
   "Введите пароль": "Enter password",
-  "Форма авторизации": "Authorization Form"
+  "Форма авторизации": "Authorization Form",
+  "Укажите валюту": "Select currency",
+  "Укажите страну": "Select country"
 }
