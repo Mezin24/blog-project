@@ -33,6 +33,10 @@ const article = {
   img: 'https://apprand.com/wp-naughtycontent/uploads/2015/08/maxresdefault.jpg',
   views: 1022,
   createdAt: '26.02.2022',
+  user: {
+    id: '1',
+    username: 'Pavel',
+  },
   type: [ArticleType.IT],
   blocks: [
     {
