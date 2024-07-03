@@ -7,28 +7,19 @@ import cls from './ArticleList.module.scss';
 
 interface ArticleListProps {
   className?: string;
-  articles?: Article[];
+  articles: Article[];
   isLoading?: boolean;
   view?: ArticleView;
 }
 
+const getSkeletons = (view: ArticleView) =>
+  new Array(view === ArticleView.SMALL ? 9 : 3)
+    .fill(0)
+    .map((item, index) => <ArticleListItemSkeleton view={view} key={index} />);
+
 export const ArticleList: FC<ArticleListProps> = memo(
   (props: ArticleListProps) => {
     const { className, view = ArticleView.BIG, articles, isLoading } = props;
-
-    if (isLoading) {
-      return (
-        <div
-          className={classnames(cls.ArticleList, {}, [className, cls[view]])}
-        >
-          {new Array(view === ArticleView.BIG ? 3 : 9)
-            .fill(0)
-            .map((item, index) => (
-              <ArticleListItemSkeleton view={view} key={index} />
-            ))}
-        </div>
-      );
-    }
 
     const renderArticle = (article: Article) => (
       <ArticleListItem article={article} view={view} key={article.id} />
@@ -36,7 +27,8 @@ export const ArticleList: FC<ArticleListProps> = memo(
 
     return (
       <div className={classnames(cls.ArticleList, {}, [className, cls[view]])}>
-        {articles?.map(renderArticle)}
+        {articles?.length > 0 ? articles?.map(renderArticle) : null}
+        {isLoading && getSkeletons(view)}
       </div>
     );
   }

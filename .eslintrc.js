@@ -67,6 +67,7 @@ module.exports = {
     'arrow-body-style': ['error', 'as-needed'],
     'object-curly-newline': 'off',
     'react/no-array-index-key': 'off',
+    'consistent-return': 'off',
   },
   globals: {
     __IS_DEV__: true,

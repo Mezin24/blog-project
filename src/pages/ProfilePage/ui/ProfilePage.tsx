@@ -16,6 +16,7 @@ import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { Page } from 'shared/UI/Page/Page';
 import { Text, TextTheme } from 'shared/UI/Text/Text';
 import {
   DynamicModuleLoader,
@@ -111,7 +112,7 @@ const ProfilePage = () => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div>
+      <Page>
         <ProfilePageHeader />
         {validateErrors &&
           validateErrors.map((err) => (
@@ -131,7 +132,7 @@ const ProfilePage = () => {
           onChangeCurrency={onChangeCurrency}
           onChangeCountry={onChangeCountry}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };

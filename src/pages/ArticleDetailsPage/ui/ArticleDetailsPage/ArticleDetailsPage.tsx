@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Button } from 'shared/UI/Button/Button';
+import { Page } from 'shared/UI/Page/Page';
 import { Text } from 'shared/UI/Text/Text';
 import { RoutePath } from 'shared/config/routerConfig/routerConfig';
 import { classnames } from 'shared/lib/classnames/classnames';
@@ -70,13 +71,13 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
 
   return (
     <DynamicModuleLoader removeAfterUnmount reducers={reducers}>
-      <div className={classnames(cls.articleDetailsPage, {}, [className])}>
+      <Page className={classnames(cls.articleDetailsPage, {}, [className])}>
         <Button onClick={onBackToList}>{t('Назад к списку')}</Button>
         <ArticleDetails id={id} />
         <Text title={t('Комментарии')} className={cls.commentTitle} />
         <AddCommentForm onSendComment={onSendComment} />
         <CommentList comments={comments} isLoading={isLoading} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };
