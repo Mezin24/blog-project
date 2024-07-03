@@ -1,9 +1,9 @@
 import { FC, memo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { classnames } from 'shared/lib/classnames/classnames';
-import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
+import cls from './ArticleList.module.scss';
 
 interface ArticleListProps {
   className?: string;
@@ -15,7 +15,20 @@ interface ArticleListProps {
 export const ArticleList: FC<ArticleListProps> = memo(
   (props: ArticleListProps) => {
     const { className, view = ArticleView.BIG, articles, isLoading } = props;
-    const { t } = useTranslation();
+
+    if (isLoading) {
+      return (
+        <div
+          className={classnames(cls.ArticleList, {}, [className, cls[view]])}
+        >
+          {new Array(view === ArticleView.BIG ? 3 : 9)
+            .fill(0)
+            .map((item, index) => (
+              <ArticleListItemSkeleton view={view} key={index} />
+            ))}
+        </div>
+      );
+    }
 
     const renderArticle = (article: Article) => (
       <ArticleListItem article={article} view={view} key={article.id} />

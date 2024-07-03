@@ -8,9 +8,11 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const Card: FC<CardProps> = memo((props: CardProps) => {
-  const { className, children } = props;
+  const { className, children, ...otherProps } = props;
 
   return (
-    <div className={classnames(cls.card, {}, [className])}>{children}</div>
+    <div {...otherProps} className={classnames(cls.card, {}, [className])}>
+      {children}
+    </div>
   );
 });

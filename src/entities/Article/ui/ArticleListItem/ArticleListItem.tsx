@@ -1,11 +1,13 @@
-import { FC, memo } from 'react';
+import { FC, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { Avatar } from 'shared/UI/Avatar/Avatar';
 import { Button, ButtonTheme } from 'shared/UI/Button/Button';
 import { Card } from 'shared/UI/Card/Card';
 import { Icon } from 'shared/UI/Icon/Icon';
 import { Text } from 'shared/UI/Text/Text';
 import EyeIcon from 'shared/assets/icons/eye.svg';
+import { RoutePath } from 'shared/config/routerConfig/routerConfig';
 import { classnames } from 'shared/lib/classnames/classnames';
 import {
   Article,
@@ -26,6 +28,11 @@ export const ArticleListItem: FC<ArticleListItemProps> = memo(
   (props: ArticleListItemProps) => {
     const { className, article, view = ArticleView.BIG } = props;
     const { t } = useTranslation();
+    const navigate = useNavigate();
+
+    const onOpenArticle = useCallback(() => {
+      navigate(RoutePath.articlesDetails + article.id);
+    }, [article.id, navigate]);
 
     const types = (
       <Text text={article?.type?.join(', ')} className={cls.types} />
@@ -54,7 +61,7 @@ export const ArticleListItem: FC<ArticleListItemProps> = memo(
               />
             )}
             <div className={cls.footer}>
-              <Button theme={ButtonTheme.OUTLINE}>
+              <Button theme={ButtonTheme.OUTLINE} onClick={onOpenArticle}>
                 {t('Читать далее...')}
               </Button>
               {views}
@@ -66,7 +73,7 @@ export const ArticleListItem: FC<ArticleListItemProps> = memo(
 
     return (
       <div className={classnames('', {}, [className, cls[view]])}>
-        <Card>
+        <Card onClick={onOpenArticle}>
           <div className={cls.imageWrapper}>
             <img src={article?.img} alt={article?.title} className={cls.img} />
             <Text text={article?.createdAt} className={cls.date} />
@@ -74,7 +81,6 @@ export const ArticleListItem: FC<ArticleListItemProps> = memo(
           <div className={cls.infoWrapper}>
             {types}
             {views}
-
             <Icon Svg={EyeIcon} />
           </div>
           <Text text={article?.title} className={cls.title} />

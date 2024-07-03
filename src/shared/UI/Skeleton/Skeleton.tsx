@@ -4,13 +4,13 @@ import cls from './Skeleton.module.scss';
 
 interface SkeletonProps {
   className?: string;
-  width: string | number;
+  width?: string | number;
   height: string | number;
   border?: string;
 }
 
 export const Skeleton: FC<SkeletonProps> = memo((props: SkeletonProps) => {
-  const { className, border, height, width } = props;
+  const { className, border, height, width = '100%' } = props;
 
   const styles: CSSProperties = {
     width,
