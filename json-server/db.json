@@ -33,6 +33,24 @@
       "text": "some comment 2",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "hgjghj",
+      "id": "ZO7vd4N"
+    },
+    {
+      "articleId": "6",
+      "userId": "1",
+      "text": "nice",
+      "id": "pcsaYf4"
+    },
+    {
+      "articleId": "11",
+      "userId": "1",
+      "text": "cool",
+      "id": "FaTdrlc"
     }
   ],
   "articles": [
@@ -44,9 +62,7 @@
       "views": 122,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -116,10 +132,7 @@
       "views": 678,
       "createdAt": "07.05.2018",
       "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -185,13 +198,11 @@
       "id": "3",
       "title": "HTML news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://luxe-host.ru/wp-content/uploads/0/d/5/0d5e3cd2129cef6991b16195c9274ec1.jpeg",
+      "img": "https://devstages.ru/wp-content/uploads/2019/12/locating-web-elements-selenium.jpg",
       "views": 348,
       "createdAt": "01.12.2020",
       "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
+      "type": ["SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -261,10 +272,7 @@
       "views": 546,
       "createdAt": "03.04.2021",
       "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -286,9 +294,7 @@
       "views": 791,
       "createdAt": "20.05.2023",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -310,10 +316,7 @@
       "views": 254,
       "createdAt": "14.05.2023",
       "userId": "2",
-      "type": [
-        "IT",
-        "CHEMISTRY"
-      ],
+      "type": ["IT", "CHEMISTRY"],
       "blocks": [
         {
           "id": "1",
@@ -335,9 +338,7 @@
       "views": 201,
       "createdAt": "09.04.2022",
       "userId": "1",
-      "type": [
-        "CHEMISTRY"
-      ],
+      "type": ["CHEMISTRY"],
       "blocks": [
         {
           "id": "1",
@@ -359,9 +360,7 @@
       "views": 1022,
       "createdAt": "26.09.2021",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -379,13 +378,11 @@
       "id": "9",
       "title": "TypeScript",
       "subtitle": "TypeScript: JavaScript With Syntax For Types.",
-      "img": "https://yt3.ggpht.com/ytc/AKedOLTbWpqHx9VWBzm37IrtW7OhSsC5KdmbyRSP7Dpz=s900-c-k-c0x00ffffff-no-rj",
+      "img": "https://beeinger.gallerycdn.vsassets.io/extensions/beeinger/ts-live-checks/1.0.0/1647436177102/Microsoft.VisualStudio.Services.Icons.Default",
       "views": 678,
       "createdAt": "22.09.2023",
       "userId": "2",
-      "type": [
-        "CHEMISTRY"
-      ],
+      "type": ["CHEMISTRY"],
       "blocks": [
         {
           "id": "1",
@@ -407,10 +404,7 @@
       "views": 500,
       "createdAt": "03.04.2021",
       "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -432,9 +426,7 @@
       "views": 360,
       "createdAt": "01.10.2023",
       "userId": "1",
-      "type": [
-        "SCIENCE"
-      ],
+      "type": ["SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -456,10 +448,7 @@
       "views": 1022,
       "createdAt": "29.05.2023",
       "userId": "2",
-      "type": [
-        "IT",
-        "CHEMISTRY"
-      ],
+      "type": ["IT", "CHEMISTRY"],
       "blocks": [
         {
           "id": "1",
@@ -481,10 +470,7 @@
       "views": 330,
       "createdAt": "03.07.2023",
       "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -506,9 +492,7 @@
       "views": 102,
       "createdAt": "10.01.2021",
       "userId": "1",
-      "type": [
-        "SCIENCE"
-      ],
+      "type": ["SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -530,10 +514,7 @@
       "views": 1103,
       "createdAt": "14.05.2021",
       "userId": "2",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -555,9 +536,7 @@
       "views": 1118,
       "createdAt": "03.04.2020",
       "userId": "1",
-      "type": [
-        "SCIENCE"
-      ],
+      "type": ["SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -579,10 +558,7 @@
       "views": 2022,
       "createdAt": "26.02.2019",
       "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -604,10 +580,7 @@
       "views": 982,
       "createdAt": "14.05.2019",
       "userId": "2",
-      "type": [
-        "IT",
-        "CHEMISTRY"
-      ],
+      "type": ["IT", "CHEMISTRY"],
       "blocks": [
         {
           "id": "1",
@@ -629,9 +602,7 @@
       "views": 1022,
       "createdAt": "23.04.2021",
       "userId": "1",
-      "type": [
-        "CHEMISTRY"
-      ],
+      "type": ["CHEMISTRY"],
       "blocks": [
         {
           "id": "1",
@@ -653,10 +624,7 @@
       "views": 1022,
       "createdAt": "24.09.2020",
       "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -678,10 +646,7 @@
       "views": 390,
       "createdAt": "22.09.2022",
       "userId": "2",
-      "type": [
-        "SCIENCE",
-        "CHEMISTRY"
-      ],
+      "type": ["SCIENCE", "CHEMISTRY"],
       "blocks": [
         {
           "id": "1",
@@ -703,10 +668,7 @@
       "views": 102,
       "createdAt": "03.04.2023",
       "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
