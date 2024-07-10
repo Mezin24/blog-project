@@ -14,14 +14,13 @@ import {
   getArticlesPageIsLoading,
   getArticlesPageView,
 } from '../../model/selectors/getArticlesPageData';
-import { fetchArticlesList } from '../../model/services/fetchArticleList';
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage';
+import { initArticlesPage } from '../../model/services/initArticlesPage';
 import {
-  articlePageActions,
   articlePageReducer,
   getArticles,
 } from '../../model/slice/articlePageSlice';
 import cls from './ArticlesPage.module.scss';
-import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage';
 
 interface ArticlesPageProps {
   className?: string;
@@ -43,16 +42,11 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   }, [dispatch]);
 
   useInitialEffect(() => {
-    dispatch(articlePageActions.init());
-    dispatch(
-      fetchArticlesList({
-        page: 1,
-      })
-    );
+    dispatch(initArticlesPage());
   });
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <Page
         onScrollEnd={onLoadNextPart}
         className={classnames(cls.articlesPage, {}, [className])}
