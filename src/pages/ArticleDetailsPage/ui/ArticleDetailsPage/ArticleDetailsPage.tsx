@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Button } from 'shared/UI/Button/Button';
-import { Page } from 'shared/UI/Page/Page';
+import { Page } from 'widgets/Page/Page';
 import { Text } from 'shared/UI/Text/Text';
 import { RoutePath } from 'shared/config/routerConfig/routerConfig';
 import { classnames } from 'shared/lib/classnames/classnames';

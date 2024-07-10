@@ -2,7 +2,7 @@ import { ArticleViewSelector } from 'entities/Article';
 import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
 import { FC, memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { Page } from 'shared/UI/Page/Page';
+import { Page } from 'widgets/Page/Page';
 import { classnames } from 'shared/lib/classnames/classnames';
 import {
   DynamicModuleLoader,
