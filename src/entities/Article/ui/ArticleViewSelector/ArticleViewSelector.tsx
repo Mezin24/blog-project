@@ -1,6 +1,4 @@
-import { articlePageActions } from 'pages/ArticlesPage/model/slice/articlePageSlice';
 import { FC, memo } from 'react';
-import { useDispatch } from 'react-redux';
 import { Button, ButtonTheme } from 'shared/UI/Button/Button';
 import { Icon } from 'shared/UI/Icon/Icon';
 import ListIcon from 'shared/assets/icons/list.svg';
@@ -12,6 +10,7 @@ import cls from './ArticleViewSelector.module.scss';
 interface ArticleViewSelectorProps {
   className?: string;
   view?: ArticleView;
+  onChangeView: (view: ArticleView) => void;
 }
 
 const viewItems = [
@@ -21,8 +20,7 @@ const viewItems = [
 
 export const ArticleViewSelector: FC<ArticleViewSelectorProps> = memo(
   (props: ArticleViewSelectorProps) => {
-    const { className, view } = props;
-    const dispatch = useDispatch();
+    const { className, view, onChangeView } = props;
 
     return (
       <div className={classnames(cls.ArticleViewSelector, {}, [className])}>
@@ -30,7 +28,7 @@ export const ArticleViewSelector: FC<ArticleViewSelectorProps> = memo(
           <Button
             key={item.view}
             theme={ButtonTheme.CLEAR}
-            onClick={() => dispatch(articlePageActions.setView(item.view))}
+            onClick={() => onChangeView(item.view)}
           >
             <Icon
               Svg={item.Icon}

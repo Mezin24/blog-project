@@ -3,5 +3,12 @@
   "Страинца статьи": "Article page",
   "Статья не найдена": "Article not found",
   "Произошла ошибка при закгрузке статьи": "Error happened while article was loading...",
-  "Комментарии": "Comments"
+  "Комментарии": "Comments",
+  "дате": "date",
+  "названию": "title",
+  "просмотрам": "views",
+  "возрастанию": "ascending",
+  "убыванию": "descending",
+  "Сортировать по": "Sort By",
+  "По": "By"
 }

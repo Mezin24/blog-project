@@ -1,4 +1,3 @@
-import { ArticleViewSelector } from 'entities/Article';
 import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
 import { FC, memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
@@ -21,6 +20,7 @@ import {
   getArticles,
 } from '../../model/slice/articlePageSlice';
 import cls from './ArticlesPage.module.scss';
+import { ArticlesPageFilter } from '../ArticlesPageFilter/ArticlesPageFilter';
 
 interface ArticlesPageProps {
   className?: string;
@@ -51,8 +51,13 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
         onScrollEnd={onLoadNextPart}
         className={classnames(cls.articlesPage, {}, [className])}
       >
-        <ArticleViewSelector view={view} />
-        <ArticleList articles={articles} view={view} isLoading={isLoading} />
+        <ArticlesPageFilter />
+        <ArticleList
+          className={cls.list}
+          articles={articles}
+          view={view}
+          isLoading={isLoading}
+        />
       </Page>
     </DynamicModuleLoader>
   );
