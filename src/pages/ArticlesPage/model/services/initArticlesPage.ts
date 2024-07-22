@@ -12,10 +12,6 @@ export const initArticlesPage = createAsyncThunk<
   const inited = getArticlesPageInit(getState());
   if (!inited) {
     dispatch(articlePageActions.init());
-    dispatch(
-      fetchArticlesList({
-        page: 1,
-      })
-    );
+    dispatch(fetchArticlesList({}));
   }
 });
